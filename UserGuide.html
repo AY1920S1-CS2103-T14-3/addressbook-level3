@@ -1,9 +1,9 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]--><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="Asciidoctor 1.5.6.1"><title>AddressBook Level 3 - User Guide</title><link rel="stylesheet" href="stylesheets/gh-pages.css">
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]--><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="Asciidoctor 1.5.6.1"><title>FlashMind - User Guide</title><link rel="stylesheet" href="stylesheets/gh-pages.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="stylesheets/coderay-asciidoctor.css"></head><body class="article"><div id="seedu-header"><nav class="navbar navbar-lg navbar-light bg-lighter"><div class="container"><a class="navbar-brand" href="https://se-edu.github.io/"><img src="images/SeEduLogo.png" alt="SE-EDU"></a><ul class="navbar-nav"><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/addressbook-level1">AB-1</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/addressbook-level2">AB-2</a></li><li class="nav-item"><a class="nav-link active" href="index.html">AB-3</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/addressbook-level4">AB-4</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/collate">Collate</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/se-book">Book</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/learningresources">Resources</a></li></ul></div></nav></div><div id="site-header"><nav class="navbar navbar-light bg-light"><div class="container"><a class="navbar-brand" href="index.html">AddressBook-Level3</a><ul class="navbar-nav"><li class="nav-item"><a class="nav-link active" href="UserGuide.html">User Guide</a></li><li class="nav-item"><a class="nav-link" href="DeveloperGuide.html">Developer Guide</a></li><li class="nav-item"><a class="nav-link" href="LearningOutcomes.html">LOs</a></li><li class="nav-item"><a class="nav-link" href="AboutUs.html">About Us</a></li><li class="nav-item"><a class="nav-link" href="ContactUs.html">Contact Us</a></li><li class="navitem"><a class="nav-link" href="https://github.com/se-edu/addressbook-level3"><span class="fa fa-github fa-lg" aria-hidden="true"></span>&nbsp;View on GitHub</a></li></ul></div></nav></div><div id="header"><h1>AddressBook Level 3 - User Guide</h1></div><div id="content"><div id="preamble">
+<link rel="stylesheet" href="stylesheets/coderay-asciidoctor.css"></head><body class="article"><div id="seedu-header"><nav class="navbar navbar-lg navbar-light bg-lighter"><div class="container"><a class="navbar-brand" href="https://se-edu.github.io/"><img src="images/SeEduLogo.png" alt="SE-EDU"></a><ul class="navbar-nav"><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/addressbook-level1">AB-1</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/addressbook-level2">AB-2</a></li><li class="nav-item"><a class="nav-link active" href="index.html">AB-3</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/addressbook-level4">AB-4</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/collate">Collate</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/se-book">Book</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/learningresources">Resources</a></li></ul></div></nav></div><div id="site-header"><nav class="navbar navbar-light bg-light"><div class="container"><a class="navbar-brand" href="index.html">AddressBook-Level3</a><ul class="navbar-nav"><li class="nav-item"><a class="nav-link active" href="UserGuide.html">User Guide</a></li><li class="nav-item"><a class="nav-link" href="DeveloperGuide.html">Developer Guide</a></li><li class="nav-item"><a class="nav-link" href="LearningOutcomes.html">LOs</a></li><li class="nav-item"><a class="nav-link" href="AboutUs.html">About Us</a></li><li class="nav-item"><a class="nav-link" href="ContactUs.html">Contact Us</a></li><li class="navitem"><a class="nav-link" href="https://github.com/se-edu/addressbook-level3"><span class="fa fa-github fa-lg" aria-hidden="true"></span>&nbsp;View on GitHub</a></li></ul></div></nav></div><div id="header"><h1>FlashMind - User Guide</h1></div><div id="content"><div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>By: <code>Team SE-EDU</code>      Since: <code>Jun 2016</code>      Licence: <code>MIT</code></p>
+<p>By: <code>SEEDU</code>      Since: <code>JUN 2016</code>      Licence: <code>MIT</code></p>
 </div>
 </div>
 <div id="toc" class="toc">
@@ -13,20 +13,22 @@
 <li><a href="#quick-start">2. Quick Start</a></li>
 <li><a href="#Features">3. Features</a>
 <ul class="sectlevel2">
-<li><a href="#viewing-help-code-help-code">3.1. Viewing help : <code>help</code></a></li>
-<li><a href="#adding-a-person-code-add-code">3.2. Adding a person: <code>add</code></a></li>
-<li><a href="#listing-all-persons-code-list-code">3.3. Listing all persons : <code>list</code></a></li>
-<li><a href="#editing-a-person-code-edit-code">3.4. Editing a person : <code>edit</code></a></li>
-<li><a href="#locating-persons-by-name-code-find-code">3.5. Locating persons by name: <code>find</code></a></li>
-<li><a href="#deleting-a-person-code-delete-code">3.6. Deleting a person : <code>delete</code></a></li>
-<li><a href="#clearing-all-entries-code-clear-code">3.7. Clearing all entries : <code>clear</code></a></li>
-<li><a href="#exiting-the-program-code-exit-code">3.8. Exiting the program : <code>exit</code></a></li>
-<li><a href="#saving-the-data">3.9. Saving the data</a></li>
-<li><a href="#encrypting-data-files-code-coming-in-v2-0-code">3.10. Encrypting data files <code>[coming in v2.0]</code></a></li>
+<li><a href="#adding-new-flashcards">3.1. Adding new flashcards</a></li>
+<li><a href="#listing-all-flashcards">3.2. Listing all flashcards</a></li>
+<li><a href="#listing-all-flashcard-by-tags">3.3. Listing all flashcard by tags</a></li>
+<li><a href="#listing-all-tags">3.4. Listing all tags</a></li>
+<li><a href="#editing-a-flashcard">3.5. Editing a flashcard</a></li>
+<li><a href="#quiz-mode">3.6. Quiz mode</a></li>
+<li><a href="#quiz-tag-mode">3.7. Quiz Tag mode</a></li>
+<li><a href="#flip-a-flashcard">3.8. Flip a flashcard</a></li>
+<li><a href="#end-quiz-mode">3.9. End quiz mode</a></li>
+<li><a href="#display-current-progress">3.10. Display current progress</a></li>
+<li><a href="#delete-a-flashcard">3.11. Delete a flashcard</a></li>
+<li><a href="#finding-a-flashcard">3.12. Finding a flashcard</a></li>
+<li><a href="#exiting-the-program">3.13. Exiting the program</a></li>
+<li><a href="#saving-the-data">3.14. Saving the data</a></li>
 </ul>
 </li>
-<li><a href="#faq">4. FAQ</a></li>
-<li><a href="#command-summary">5. Command Summary</a></li>
 </ul>
 </div>
 </div>
@@ -34,7 +36,11 @@
 <h2 id="introduction"><a class="link" href="#introduction">1. Introduction</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>AddressBook Level 3 (AB3) is for those who <strong>prefer to use a desktop app for managing contacts</strong>. More importantly, AB3 is <strong>optimized for those who prefer to work with a Command Line Interface</strong> (CLI) while still having the benefits of a Graphical User Interface (GUI). If you can type fast, AB3 can get your contact management tasks done faster than traditional GUI apps. Interested? Jump to the <a href="#quick-start">Section 2, &#8220;Quick Start&#8221;</a> to get started. Enjoy!</p>
+<p>FlashMind helps students to use their time breaks to memorize things
+like vocabulary and some general knowledges, especially those who prefer
+command line interface (CLI) over clicks. Everything is organized into
+flashcards, each contain one question. Users can also tag the flashcards
+to group them and see their progress over time through statistics.</p>
 </div>
 </div>
 </div>
@@ -47,16 +53,16 @@
 <p>Ensure you have Java <code>11</code> or above installed in your Computer.</p>
 </li>
 <li>
-<p>Download the latest <code>addressbook.jar</code> <a href="https://github.com/se-edu/addressbook-level3/releases">here</a>.</p>
+<p>Download the latest <code>flashback.jar</code> <a href="https://github.com/se-edu/addressbook-level3/releases">here</a>.</p>
 </li>
 <li>
-<p>Copy the file to the folder you want to use as the home folder for your Address Book.</p>
+<p>Copy the file to the folder you want to use as the home folder for your flashback.</p>
 </li>
 <li>
 <p>Double-click the file to start the app. The GUI should appear in a few seconds.</p>
 <div class="imageblock">
 <div class="content">
-<img src="images/Ui.png" alt="Ui" width="790">
+<img src="images/Ui_updated.png" alt="Ui updated" width="790">
 </div>
 </div>
 </li>
@@ -69,13 +75,13 @@ e.g. typing <strong><code>help</code></strong> and pressing <kbd>Enter</kbd> wil
 <div class="ulist">
 <ul>
 <li>
-<p><strong><code>list</code></strong> : lists all contacts</p>
+<p><strong><code>list</code></strong> : lists all flashcards</p>
 </li>
 <li>
-<p><strong><code>add</code></strong><code>n/John Doe p/98765432 e/johnd@example.com a/John street, block 123, #01-01</code> : adds a contact named <code>John Doe</code> to the Address Book.</p>
+<p><strong><code>add q/How long is Mount Blanc Tunnel? a/11611m d/An amazing tunnel on the boarder of France and Italy</code></strong>: Add a flashcard about Mount Blanc Tunnel</p>
 </li>
 <li>
-<p><strong><code>delete</code></strong><code>3</code> : deletes the 3rd contact shown in the current list</p>
+<p><strong><code>delete</code></strong><code>3</code> : deletes the flashcard with index 3 on the listed flashcards.</p>
 </li>
 <li>
 <p><strong><code>exit</code></strong> : exits the app</p>
@@ -101,44 +107,55 @@ e.g. typing <strong><code>help</code></strong> and pressing <kbd>Enter</kbd> wil
 <div class="ulist">
 <ul>
 <li>
-<p>Words in <code>UPPER_CASE</code> are the parameters to be supplied by the user e.g. in <code>add n/NAME</code>, <code>NAME</code> is a parameter which can be used as <code>add n/John Doe</code>.</p>
+<p>Words in <code>UPPER_CASE</code> are the parameters to be supplied by the user e.g. in <code>add q/QUESTION</code>, <code>QUESTION</code> is a parameter which can be used as <code>add q/How long is Mount Blanc Tunnel?</code>.</p>
 </li>
 <li>
-<p>Items in square brackets are optional e.g <code>n/NAME [t/TAG]</code> can be used as <code>n/John Doe t/friend</code> or as <code>n/John Doe</code>.</p>
+<p>Items in square brackets are optional e.g <code>q/QUESTION [t/TAG]</code> can be used as <code>q/How long is Mount Blanc Tunnel? t/geography</code> or as <code>q/How long is Mount Blanc Tunnel?</code>.</p>
 </li>
 <li>
-<p>Items with <code>…</code>​ after them can be used multiple times including zero times e.g. <code>[t/TAG]&#8230;&#8203;</code> can be used as <code>&#160;</code> (i.e. 0 times), <code>t/friend</code>, <code>t/friend t/family</code> etc.</p>
+<p>Items with <code>…</code> after them can be used multiple times including zero times e.g. <code>[t/TAG]&#8230;&#8203;</code> can be used as <code>&#160;</code> (i.e. 0 times), <code>t/geography</code>, <code>t/geography t/civil engineering</code> etc.</p>
 </li>
 <li>
-<p>Parameters can be in any order e.g. if the command specifies <code>n/NAME p/PHONE_NUMBER</code>, <code>p/PHONE_NUMBER n/NAME</code> is also acceptable.</p>
+<p>Parameters can be in any order e.g. if the command specifies <code>q/QUESTION a/ANSWER</code>, <code>a/ANSWER q/QUESTION</code> is also acceptable.</p>
+</li>
+<li>
+<p>To view all the available commands that the user can use. Use help command<br>
+Format: <code>help</code></p>
 </li>
 </ul>
 </div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="viewing-help-code-help-code"><a class="link" href="#viewing-help-code-help-code">3.1. Viewing help : <code>help</code></a></h3>
+<h3 id="adding-new-flashcards"><a class="link" href="#adding-new-flashcards">3.1. Adding new flashcards</a></h3>
 <div class="paragraph">
-<p>Format: <code>help</code></p>
+<p>Add a new flashcard and specify its question, definition, tags, choices and answer.<br>
+Format: <code>add q/QUESTION d/DEFINITION [t/TAG]&#8230;&#8203; [c/CHOICE]&#8230;&#8203; a/ANSWER</code></p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>QUESTION, DEFINITION and ANSWER must be provided while creating a flashcard, tags and choices are optional.</p>
+</li>
+<li>
+<p>If there are no choices specified in the flashcard, the system will generate a short answer flashcard. Otherwise,
+the system will generate an MCQ flashcard.</p>
+</li>
+<li>
+<p>Note that during the quiz mode, to answer a short answer flashcard correctly, you must input an answer exactly match
+answer you typed while this flashcard is created. Thus, be sure to provide enough information in QUESTION and DEFINITION
+for you to figure out the exact correct answer.</p>
+</li>
+<li>
+<p>Note that while creating an MCQ flashcard, the answer is the input for your correct choice, not just a number.
+If the answer you input does not match any of the choices, the system will tell you this flashcard is invalid.
+Please refer to the following examples for a better understanding.</p>
+</li>
+</ul>
 </div>
 </div>
-<div class="sect2">
-<h3 id="adding-a-person-code-add-code"><a class="link" href="#adding-a-person-code-add-code">3.2. Adding a person: <code>add</code></a></h3>
-<div class="paragraph">
-<p>Adds a person to the address book<br>
-Format: <code>add n/NAME p/PHONE_NUMBER e/EMAIL a/ADDRESS [t/TAG]&#8230;&#8203;</code></p>
-</div>
-<div class="admonitionblock tip">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-tip" title="Tip"></i>
-</td>
-<td class="content">
-A person can have any number of tags (including 0)
-</td>
-</tr>
-</table>
 </div>
 <div class="paragraph">
 <p>Examples:</p>
@@ -146,33 +163,81 @@ A person can have any number of tags (including 0)
 <div class="ulist">
 <ul>
 <li>
-<p><code>add n/John Doe p/98765432 e/johnd@example.com a/John street, block 123, #01-01</code></p>
+<p><code>add q/What is the tallest mountain in the world? d/This mountain is on the boarder of China and Nepal. a/Mount Everest</code> :
+Creates a new short answer flashcard with the given question, definition and answer.</p>
 </li>
 <li>
-<p><code>add n/Betsy Crowe t/friend e/betsycrowe@example.com a/Newgate Prison p/1234567 t/criminal</code></p>
+<p><code>add q/What is the tallest mountain in thw world? d/This mountain is on the boarder of China and Nepal. c/Mountain Everest
+c/Mount Blanc c/Shkhara c/Bukit Timah a/Mountain Everest</code> : Creates a new MCQ flashcard with the given question, definition choices and answer.</p>
+</li>
+<li>
+<p><code>add q/What is the tallest mountain in thw world? d/This mountain is on the boarder of China and Nepal. c/Mountain Everest
+c/Mount Blanc c/Shkhara c/Bukit Timah a/Alps</code> : Since the answer you input does not match with any of the choices, the
+system will generate an error message.</p>
 </li>
 </ul>
 </div>
 </div>
 <div class="sect2">
-<h3 id="listing-all-persons-code-list-code"><a class="link" href="#listing-all-persons-code-list-code">3.3. Listing all persons : <code>list</code></a></h3>
+<h3 id="listing-all-flashcards"><a class="link" href="#listing-all-flashcards">3.2. Listing all flashcards</a></h3>
 <div class="paragraph">
-<p>Shows a list of all persons in the address book.<br>
+<p>Shows a list of all existing flashcards in the system.<br>
 Format: <code>list</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="editing-a-person-code-edit-code"><a class="link" href="#editing-a-person-code-edit-code">3.4. Editing a person : <code>edit</code></a></h3>
+<h3 id="listing-all-flashcard-by-tags"><a class="link" href="#listing-all-flashcard-by-tags">3.3. Listing all flashcard by tags</a></h3>
 <div class="paragraph">
-<p>Edits an existing person in the address book.<br>
-Format: <code>edit INDEX [n/NAME] [p/PHONE] [e/EMAIL] [a/ADDRESS] [t/TAG]&#8230;&#8203;</code></p>
+<p>Shows a list of all flashcard under given tag names. If there are no flashcards under the input tag name, you should see
+an empty flashcard list being displayed. Note you can list multiple tags at the same time.<br>
+Format: <code>listbytag t/TAG&#8230;&#8203;</code></p>
 </div>
 <div class="sidebarblock">
 <div class="content">
 <div class="ulist">
 <ul>
 <li>
-<p>Edits the person at the specified <code>INDEX</code>. The index refers to the index number shown in the displayed person list. The index <strong>must be a positive integer</strong> 1, 2, 3, &#8230;&#8203;</p>
+<p>At least on tag needs to be specified after keyword <code>listbytag</code>, otherwise the system will show an error message.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>listbytag t/mathematics</code> : List all flashcards under the tag mathematics.</p>
+</li>
+<li>
+<p><code>listbytag t/mathematics t/geography</code> : List all flashcards under the tag mathematics OR the tag geography.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="listing-all-tags"><a class="link" href="#listing-all-tags">3.4. Listing all tags</a></h3>
+<div class="paragraph">
+<p>Show the list of tags exists in the system.<br>
+Format: <code>listtag</code></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="editing-a-flashcard"><a class="link" href="#editing-a-flashcard">3.5. Editing a flashcard</a></h3>
+<div class="paragraph">
+<p>Edits an existing flashcard in the address book.<br></p>
+</div>
+<div class="paragraph">
+<p>Format: <code>edit INDEX [q/QUESTION] [a/ANSWER] [d/DEFINITION] [t/TAG]&#8230;&#8203; [c/CHOICE]&#8230;&#8203;</code></p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>INDEX is the index of this target flashcard in the displayed list.</p>
 </li>
 <li>
 <p>At least one of the optional fields must be provided.</p>
@@ -181,10 +246,12 @@ Format: <code>edit INDEX [n/NAME] [p/PHONE] [e/EMAIL] [a/ADDRESS] [t/TAG]&#8230;
 <p>Existing values will be updated to the input values.</p>
 </li>
 <li>
-<p>When editing tags, the existing tags of the person will be removed i.e adding of tags is not cumulative.</p>
+<p>Note that while updating choices or tags, they are updated together. This means, assume you have 4 choices for
+flashcard number 2, then you typed <code>edit 2 c/Mount Blanc</code>, then there will be only one choice left for flashcard number 2,
+which is Mount Blanc. The same applies when editing tags.</p>
 </li>
 <li>
-<p>You can remove all the person&#8217;s tags by typing <code>t/</code> without specifying any tags after it.</p>
+<p>While editing the answer for an MCQ flashcard, still ensure that the updated answer matches any one of the choices.</p>
 </li>
 </ul>
 </div>
@@ -196,40 +263,34 @@ Format: <code>edit INDEX [n/NAME] [p/PHONE] [e/EMAIL] [a/ADDRESS] [t/TAG]&#8230;
 <div class="ulist">
 <ul>
 <li>
-<p><code>edit 1 p/91234567 e/johndoe@example.com</code><br>
-Edits the phone number and email address of the 1st person to be <code>91234567</code> and <code>johndoe@example.com</code> respectively.</p>
+<p><code>edit 5 q/What is the tallest mountain?</code><br>
+Edits the question of the card with index 5 to "What is the tallest mountain?".</p>
 </li>
 <li>
-<p><code>edit 2 n/Betsy Crower t/</code><br>
-Edits the name of the 2nd person to be <code>Betsy Crower</code> and clears all existing tags.</p>
+<p><code>edit 5 a/Mount Everest</code>
+Edits the answer of the card with number 5 to "Mount Everest".</p>
 </li>
 </ul>
 </div>
 </div>
 <div class="sect2">
-<h3 id="locating-persons-by-name-code-find-code"><a class="link" href="#locating-persons-by-name-code-find-code">3.5. Locating persons by name: <code>find</code></a></h3>
+<h3 id="quiz-mode"><a class="link" href="#quiz-mode">3.6. Quiz mode</a></h3>
 <div class="paragraph">
-<p>Finds persons whose names contain any of the given keywords.<br>
-Format: <code>find KEYWORD [MORE_KEYWORDS]</code></p>
+<p>Starts a quiz using a particular flashcard index.<br>
+Format:</p>
+</div>
+<div class="paragraph">
+<p>Format: <code>quiz INDEX</code></p>
 </div>
 <div class="sidebarblock">
 <div class="content">
 <div class="ulist">
 <ul>
 <li>
-<p>The search is case insensitive. e.g <code>hans</code> will match <code>Hans</code></p>
+<p>Start a quiz using the flashcard with given index.</p>
 </li>
 <li>
-<p>The order of the keywords does not matter. e.g. <code>Hans Bo</code> will match <code>Bo Hans</code></p>
-</li>
-<li>
-<p>Only the name is searched.</p>
-</li>
-<li>
-<p>Only full words will be matched e.g. <code>Han</code> will not match <code>Hans</code></p>
-</li>
-<li>
-<p>Persons matching at least one keyword will be returned (i.e. <code>OR</code> search). e.g. <code>Hans Bo</code> will return <code>Hans Gruber</code>, <code>Bo Yang</code></p>
+<p>User can answer the flashcard using the <code>flip</code> command (see 3.8).</p>
 </li>
 </ul>
 </div>
@@ -241,20 +302,179 @@ Format: <code>find KEYWORD [MORE_KEYWORDS]</code></p>
 <div class="ulist">
 <ul>
 <li>
-<p><code>find John</code><br>
-Returns <code>john</code> and <code>John Doe</code></p>
-</li>
-<li>
-<p><code>find Betsy Tim John</code><br>
-Returns any person having names <code>Betsy</code>, <code>Tim</code>, or <code>John</code></p>
+<p><code>quiz 8</code> : start a quiz on the flashcard number 8.</p>
 </li>
 </ul>
 </div>
 </div>
 <div class="sect2">
-<h3 id="deleting-a-person-code-delete-code"><a class="link" href="#deleting-a-person-code-delete-code">3.6. Deleting a person : <code>delete</code></a></h3>
+<h3 id="quiz-tag-mode"><a class="link" href="#quiz-tag-mode">3.7. Quiz Tag mode</a></h3>
 <div class="paragraph">
-<p>Deletes the specified person from the address book.<br>
+<p>Starts a continuous quiz on a tag or a series of tags<br>
+Format:</p>
+</div>
+<div class="paragraph">
+<p>Format: <code>quiz t/TAG&#8230;&#8203;</code></p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>Starts a continuous quiz on all flashcards in the given tags</p>
+</li>
+<li>
+<p>Users can continuously use the <code>flip</code> command to answer the series of flashcards (see 3.8).</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>quiz t/mathematics t/geography</code> : start a quiz on all the flashcards with tag <code>mathematics</code> and <code>geography</code>.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="flip-a-flashcard"><a class="link" href="#flip-a-flashcard">3.8. Flip a flashcard</a></h3>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Only usable in quiz mode (i.e after a quiz or quiztag command)
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Format: <code>flip ANSWER</code></p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>Short answer flashcards will accept any answer.</p>
+</li>
+<li>
+<p>MCQ flashcards will only accept numbers as an answer. The number must match an index of the choices.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="paragraph">
+<p>After <code>quiztag t/geography</code>, the flashcard below is shown:</p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p>What is the tallest mountain in the world?</p>
+</div>
+<div class="paragraph">
+<p>Definitions: The answer is Mount Everest.</p>
+</div>
+<div class="paragraph">
+<p>Tags: [geography]</p>
+</div>
+<div class="paragraph">
+<p>Choices:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Mount Fuji</p>
+</li>
+<li>
+<p>Mount Everest</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>The user can type <code>flip 2</code> to answer the flashcard correctly.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="end-quiz-mode"><a class="link" href="#end-quiz-mode">3.9. End quiz mode</a></h3>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Only usable in quiz mode(i.e after a quiz or quiztag command).
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Format: <code>end</code></p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>Used to end a quiz if the user wants to stop the quiz without answering the flashcard</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="display-current-progress"><a class="link" href="#display-current-progress">3.10. Display current progress</a></h3>
+<div class="paragraph">
+<p>Shows the current progress of a set of flashcards.<br>
+Format: <code>stats [t/TAG]&#8230;&#8203;</code></p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>Statistics shown include number of completed cards and accuracy</p>
+</li>
+<li>
+<p>Multiple TAG&#8217;s can be added to combine statistics of multiple sets</p>
+</li>
+<li>
+<p>If no TAG is provided statistics of all the cards will be shown</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>stats t/biology</code> : Displays the progress of a the flashcards tagged with Biology.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="delete-a-flashcard"><a class="link" href="#delete-a-flashcard">3.11. Delete a flashcard</a></h3>
+<div class="paragraph">
+<p>Deletes the specified flashcard from the list of all flashcards.<br>
 Format: <code>delete INDEX</code></p>
 </div>
 <div class="sidebarblock">
@@ -262,105 +482,64 @@ Format: <code>delete INDEX</code></p>
 <div class="ulist">
 <ul>
 <li>
-<p>Deletes the person at the specified <code>INDEX</code>.</p>
-</li>
-<li>
-<p>The index refers to the index number shown in the displayed person list.</p>
-</li>
-<li>
-<p>The index <strong>must be a positive integer</strong> 1, 2, 3, &#8230;&#8203;</p>
+<p>Deletes the person with the specified <code>INDEX</code>.</p>
 </li>
 </ul>
 </div>
 </div>
 </div>
 <div class="paragraph">
-<p>Examples:</p>
+<p>Example:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><code>list</code><br>
-<code>delete 2</code><br>
-Deletes the 2nd person in the address book.</p>
-</li>
-<li>
-<p><code>find Betsy</code><br>
-<code>delete 1</code><br>
-Deletes the 1st person in the results of the <code>find</code> command.</p>
+<p><code>delete 5</code> : Removes the flashcard with index 5 in the list.</p>
 </li>
 </ul>
 </div>
 </div>
 <div class="sect2">
-<h3 id="clearing-all-entries-code-clear-code"><a class="link" href="#clearing-all-entries-code-clear-code">3.7. Clearing all entries : <code>clear</code></a></h3>
+<h3 id="finding-a-flashcard"><a class="link" href="#finding-a-flashcard">3.12. Finding a flashcard</a></h3>
 <div class="paragraph">
-<p>Clears all entries from the address book.<br>
-Format: <code>clear</code></p>
+<p>Find a flashcard based on the keyword in its question, definition or answer.<br>
+Format: <code>find KEYWORD</code></p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>The key word must not be empty.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Example:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>find Blanc</code> : Find flashcards whose question or answer contains string "Blanc".</p>
+</li>
+</ul>
 </div>
 </div>
 <div class="sect2">
-<h3 id="exiting-the-program-code-exit-code"><a class="link" href="#exiting-the-program-code-exit-code">3.8. Exiting the program : <code>exit</code></a></h3>
+<h3 id="exiting-the-program"><a class="link" href="#exiting-the-program">3.13. Exiting the program</a></h3>
 <div class="paragraph">
 <p>Exits the program.<br>
 Format: <code>exit</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="saving-the-data"><a class="link" href="#saving-the-data">3.9. Saving the data</a></h3>
+<h3 id="saving-the-data"><a class="link" href="#saving-the-data">3.14. Saving the data</a></h3>
 <div class="paragraph">
-<p>Address book data are saved in the hard disk automatically after any command that changes the data.<br>
+<p>Flashcards are saved in the hard disk automatically after any command that changes the data.<br>
 There is no need to save manually.</p>
 </div>
 </div>
-<div class="sect2">
-<h3 id="encrypting-data-files-code-coming-in-v2-0-code"><a class="link" href="#encrypting-data-files-code-coming-in-v2-0-code">3.10. Encrypting data files <code>[coming in v2.0]</code></a></h3>
-<div class="paragraph">
-<p><em>{explain how the user can enable/disable data encryption}</em></p>
 </div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="faq"><a class="link" href="#faq">4. FAQ</a></h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p><strong>Q</strong>: How do I transfer my data to another Computer?<br>
-<strong>A</strong>: Install the app in the other computer and overwrite the empty data file it creates with the file that contains the data of your previous Address Book folder.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="command-summary"><a class="link" href="#command-summary">5. Command Summary</a></h2>
-<div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Add</strong> <code>add n/NAME p/PHONE_NUMBER e/EMAIL a/ADDRESS [t/TAG]&#8230;&#8203;</code><br>
-e.g. <code>add n/James Ho p/22224444 e/jamesho@example.com a/123, Clementi Rd, 1234665 t/friend t/colleague</code></p>
-</li>
-<li>
-<p><strong>Clear</strong> : <code>clear</code></p>
-</li>
-<li>
-<p><strong>Delete</strong> : <code>delete INDEX</code><br>
-e.g. <code>delete 3</code></p>
-</li>
-<li>
-<p><strong>Edit</strong> : <code>edit INDEX [n/NAME] [p/PHONE_NUMBER] [e/EMAIL] [a/ADDRESS] [t/TAG]&#8230;&#8203;</code><br>
-e.g. <code>edit 2 n/James Lee e/jameslee@example.com</code></p>
-</li>
-<li>
-<p><strong>Find</strong> : <code>find KEYWORD [MORE_KEYWORDS]</code><br>
-e.g. <code>find James Jake</code></p>
-</li>
-<li>
-<p><strong>List</strong> : <code>list</code></p>
-</li>
-<li>
-<p><strong>Help</strong> : <code>help</code></p>
-</li>
-</ul>
-</div>
-</div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-09-17 15:17:24 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-11-02 01:10:20 UTC</div></div></div></body></html>

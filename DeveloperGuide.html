@@ -557,7 +557,9 @@ If the <code>currentStatePointer</code> is at index <code>flashcardListStateList
 <div class="sect2">
 <h3 id="proposed-data-encryption"><a class="link" href="#proposed-data-encryption">3.3. [Proposed] Data Encryption</a></h3>
 <div class="paragraph">
-<p><em>{Explain here how the data encryption feature will be implemented}</em></p>
+<p>Since the current FlashMind uses scores to helps the user see his progress, we found that the user can easily access
+the scores saved in the json files and change them, so the scoree will no longer be accurate. Therefore, it is suggestible
+to use some encryption on the scores saved in the json file to avoid the user manually change them.</p>
 </div>
 </div>
 <div class="sect2">
@@ -1591,11 +1593,11 @@ Expected: The most recent window size and location is retained.</p>
 <p>Prerequisites: List all flashcards using the <code>list</code> command. Multiple flashcards in the list.</p>
 </li>
 <li>
-<p>Test case: <code>delete 000001</code><br>
+<p>Test case: <code>delete 1</code><br>
 Expected: First flashcard with ID 1 is deleted from the list.</p>
 </li>
 <li>
-<p>Test case: <code>delete 000000</code><br>
+<p>Test case: <code>delete 0</code><br>
 Expected: No flashcard is deleted. Error details shown in the status message.</p>
 </li>
 <li>
@@ -1632,4 +1634,4 @@ Expected: Similar to previous.</p>
 </div>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-11-03 14:53:34 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-11-06 01:14:29 UTC</div></div></div></body></html>

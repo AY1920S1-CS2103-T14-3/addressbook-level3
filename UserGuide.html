@@ -25,8 +25,9 @@
 <li><a href="#display-current-progress">3.10. Display current progress</a></li>
 <li><a href="#delete-a-flashcard">3.11. Delete a flashcard</a></li>
 <li><a href="#finding-a-flashcard">3.12. Finding a flashcard</a></li>
-<li><a href="#exiting-the-program">3.13. Exiting the program</a></li>
-<li><a href="#saving-the-data">3.14. Saving the data</a></li>
+<li><a href="#undo-redo">3.13. Undo &amp; Redo</a></li>
+<li><a href="#exiting-the-program">3.14. Exiting the program</a></li>
+<li><a href="#saving-the-data">3.15. Saving the data</a></li>
 </ul>
 </li>
 </ul>
@@ -279,7 +280,7 @@ Edits the answer of the card with number 5 to "Mount Everest".</p>
 <div class="sect2">
 <h3 id="quiz-mode"><a class="link" href="#quiz-mode">3.6. Quiz mode</a></h3>
 <div class="paragraph">
-<p>Starts a quiz using a particular flashcard index or with a with an optional time limit.<br>
+<p>Starts a quiz using a particular flashcard index or with a with an optional time limit with units in seconds.<br>
 Format:</p>
 </div>
 <div class="paragraph">
@@ -298,6 +299,9 @@ Format:</p>
 <li>
 <p>If the quiz is not answered within the time limit, FlashMind will skip the quiz and mark it as wrong.</p>
 </li>
+<li>
+<p>If the quiz time is not specified, the default time limit will be 15 seconds.</p>
+</li>
 </ul>
 </div>
 </div>
@@ -308,6 +312,9 @@ Format:</p>
 <div class="ulist">
 <ul>
 <li>
+<p><code>quiz 8</code>: start a quiz on the flashcard number 8 with a default time limit of 15 seconds.</p>
+</li>
+<li>
 <p><code>quiz 8 t/10</code> : start a quiz on the flashcard number 8, given time limit 10 seconds.</p>
 </li>
 </ul>
@@ -316,11 +323,11 @@ Format:</p>
 <div class="sect2">
 <h3 id="quiz-tag-mode"><a class="link" href="#quiz-tag-mode">3.7. Quiz Tag mode</a></h3>
 <div class="paragraph">
-<p>Starts a continuous quiz on a tag or a series of tags<br>
+<p>Starts a continuous quiz on a tag or a series of tags and an optional time limit with units in seconds.<br>
 Format:</p>
 </div>
 <div class="paragraph">
-<p>Format: <code>quiztag t/TAG&#8230;&#8203;</code></p>
+<p>Format: <code>quiztag t/TAG&#8230;&#8203; [s/TIME_LIMIT]</code></p>
 </div>
 <div class="sidebarblock">
 <div class="content">
@@ -331,6 +338,9 @@ Format:</p>
 </li>
 <li>
 <p>Users can continuously use the <code>flip</code> command to answer the series of flashcards (see 3.8).</p>
+</li>
+<li>
+<p>If the quiz time is not specified, the default time limit will be 15 seconds.</p>
 </li>
 </ul>
 </div>
@@ -343,6 +353,9 @@ Format:</p>
 <ul>
 <li>
 <p><code>quiztag t/mathematics t/geography</code> : start a quiz on all the flashcards with tag <code>mathematics</code> and <code>geography</code>.</p>
+</li>
+<li>
+<p><code>quiztag t/mathematics s/30</code> : start a quiz on all flashcards with tag <code>mathematics</code> with each quiz a time limit of 30 seconds.</p>
 </li>
 </ul>
 </div>
@@ -534,18 +547,30 @@ Format: <code>find KEYWORD</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="exiting-the-program"><a class="link" href="#exiting-the-program">3.13. Exiting the program</a></h3>
+<h3 id="undo-redo"><a class="link" href="#undo-redo">3.13. Undo &amp; Redo</a></h3>
 <div class="paragraph">
-<p>Exits the program.<br>
-Format: <code>exit</code></p>
+<p>Suppose you delete, add or edit a flashcard with a mistake, you can use undo to bring yourself back to the previous stage.
+If you did an Undo command by mistake, you can also use Redo command to undo an Undo Command. Note that Undo and Redo can only take affect
+for flashcard modifications, it cannot undo your quiz result.
+Format: <code>Undo</code>, <code>Redo</code>.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="saving-the-data"><a class="link" href="#saving-the-data">3.14. Saving the data</a></h3>
+<h3 id="exiting-the-program"><a class="link" href="#exiting-the-program">3.14. Exiting the program</a></h3>
+<div class="paragraph">
+<p>Exits the program.<br>
+Format: <code>exit</code><br>
+Special Notation: We strongly recommend you to exit FlashMind using <code>exit</code> command instead of directly closing the window.
+The reason is, if you directly close the window, you might lose some of the progress you made in this session. That is, some of the
+quiz scores might not be saved. Through <code>exit</code> command, all of your quiz results will be saved properly.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="saving-the-data"><a class="link" href="#saving-the-data">3.15. Saving the data</a></h3>
 <div class="paragraph">
 <p>Flashcards are saved in the hard disk automatically after any command that changes the data.<br>
 There is no need to save manually.</p>
 </div>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-11-09 01:23:40 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-11-09 02:52:57 UTC</div></div></div></body></html>

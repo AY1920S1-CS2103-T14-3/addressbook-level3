@@ -279,11 +279,11 @@ Edits the answer of the card with number 5 to "Mount Everest".</p>
 <div class="sect2">
 <h3 id="quiz-mode"><a class="link" href="#quiz-mode">3.6. Quiz mode</a></h3>
 <div class="paragraph">
-<p>Starts a quiz using a particular flashcard index.<br>
+<p>Starts a quiz using a particular flashcard index or with a with an optional time limit.<br>
 Format:</p>
 </div>
 <div class="paragraph">
-<p>Format: <code>quiz INDEX</code></p>
+<p>Format: <code>quiz INDEX [s/TIME_LIMIT]</code></p>
 </div>
 <div class="sidebarblock">
 <div class="content">
@@ -295,6 +295,9 @@ Format:</p>
 <li>
 <p>User can answer the flashcard using the <code>flip</code> command (see 3.8).</p>
 </li>
+<li>
+<p>If the quiz is not answered within the time limit, FlashMind will skip the quiz and mark it as wrong.</p>
+</li>
 </ul>
 </div>
 </div>
@@ -305,7 +308,7 @@ Format:</p>
 <div class="ulist">
 <ul>
 <li>
-<p><code>quiz 8</code> : start a quiz on the flashcard number 8.</p>
+<p><code>quiz 8 t/10</code> : start a quiz on the flashcard number 8, given time limit 10 seconds.</p>
 </li>
 </ul>
 </div>
@@ -545,4 +548,4 @@ There is no need to save manually.</p>
 </div>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-11-09 01:13:30 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-11-09 01:23:40 UTC</div></div></div></body></html>

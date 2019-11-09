@@ -1,0 +1,425 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]--><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="Asciidoctor 1.5.6.1"><title>Jolyn Tan - Project Portfolio</title><link rel="stylesheet" href="../stylesheets/gh-pages.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="../stylesheets/coderay-asciidoctor.css"></head><body class="article"><div id="site-header"><nav class="navbar navbar-light bg-light"><div class="container"><ul class="navbar-nav"><li class="nav-item"><a class="nav-link" href="../UserGuide.html">User Guide</a></li><li class="nav-item"><a class="nav-link" href="../DeveloperGuide.html">Developer Guide</a></li><li class="nav-item"><a class="nav-link" href="../LearningOutcomes.html">LOs</a></li><li class="nav-item"><a class="nav-link active" href="../AboutUs.html">About Us</a></li><li class="nav-item"><a class="nav-link" href="../ContactUs.html">Contact Us</a></li></ul></div></nav></div><div id="header"><h1>Jolyn Tan - Project Portfolio</h1></div><div id="content"><div class="sect1">
+<h2 id="project-flashmind"><a class="link" href="#project-flashmind">PROJECT: Flashmind</a></h2>
+<div class="sectionbody">
+<hr>
+</div>
+</div>
+<div class="sect1">
+<h2 id="overview"><a class="link" href="#overview">Overview</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Flashmind is a CLI-based flashcard app designed to help students memorise and revise important content.
+It is used mainly for questions that can be answered with a short answer or several MCQ choices.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="summary-of-contributions"><a class="link" href="#summary-of-contributions">Summary of contributions</a></h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Major enhancement</strong>: added <strong>the ability to start a quiz on a series of flashcards</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>What it does: Allows the user to start a timed quiz on a series of flashcards based on their tags. Users are able to choose one or multiple tags to quiz themselves on.</p>
+</li>
+<li>
+<p>Justification: This feature is a great enhancement for users who are looking to memorise content. Instead of just looking at the flashcard, users are able to test themselves in a timed condition and receive feedback from the system on whether their answer is correct.</p>
+</li>
+<li>
+<p>Highlights: This enhancement required a holistic understanding of how commands are received. The quiz function required an implementation of quiz mode, which locks certains command and allows a new set of commands to be executed.</p>
+</li>
+<li>
+<p>Credits: My teammate, Zhi Wei, helped to implement the timer in the quiz mode.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Major enhancement</strong>: added <strong>the ability to add two different types of flashcard: MCQ and ShortAnswer</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>What it does: Allows the user to choose whether they want their flashcard to have MCQ options or simply be a short answer flashcard.</p>
+</li>
+<li>
+<p>Justification: This feature enhances the user&#8217;s learning experiences as flashcards are now more versatile, allowing users to have MCQ options for questions that are harder to remember.</p>
+</li>
+<li>
+<p>Highlights: This enhancement required a modification of storage, as well as a refactoring of the code to distinguish between MCQ and Short Answer flashcards.</p>
+</li>
+<li>
+<p>Credits: <em>{mention here if you reused any code/ideas from elsewhere or if a third-party library is heavily used in the feature so that a reader can make a more accurate judgement of how much effort went into the feature}</em></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Minor enhancement</strong>:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Split up the UI to return consecutive flashcards and the result to different displays.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Code contributed</strong>: [<a href="https://nus-cs2103-ay1920s1.github.io/tp-dashboard/#search=&amp;sort=groupTitle&amp;sortWithin=title&amp;since=2019-09-06&amp;timeframe=commit&amp;mergegroup=false&amp;groupSelect=groupByRepos&amp;breakdown=false&amp;tabOpen=true&amp;tabType=authorship&amp;tabAuthor=jolynnn8D&amp;tabRepo=AY1920S1-CS2103-T14-3%2Fmain%5Bmaster%5D">Functional code</a>] [<a href="https://nus-cs2103-ay1920s1.github.io/tp-dashboard/#search=&amp;sort=groupTitle&amp;sortWithin=title&amp;since=2019-09-06&amp;timeframe=commit&amp;mergegroup=false&amp;groupSelect=groupByRepos&amp;breakdown=false&amp;tabOpen=true&amp;tabType=authorship&amp;tabAuthor=jolynnn8D&amp;tabRepo=AY1920S1-CS2103-T14-3%2Fmain%5Bmaster%5D">Test code</a>]</p>
+</li>
+<li>
+<p><strong>Other contributions</strong>:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Enhancements to existing features:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Wrote additional tests for existing features to increase coverage</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Documentation:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Updated relevant sections of User Guide for all commands in quiz mode: <a href="https://github.com/AY1920S1-CS2103-T14-3/main/pull/85">#85</a></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Community: //not updated</p>
+<div class="ulist">
+<ul>
+<li>
+<p>PRs reviewed (with non-trivial review comments): <a href="https://github.com">#12</a>, <a href="https://github.com">#32</a>, <a href="https://github.com">#19</a>, <a href="https://github.com">#42</a></p>
+</li>
+<li>
+<p>Contributed to forum discussions (examples:  <a href="https://github.com">1</a>, <a href="https://github.com">2</a>, <a href="https://github.com">3</a>, <a href="https://github.com">4</a>)</p>
+</li>
+<li>
+<p>Reported bugs and suggestions for other teams in the class (examples:  <a href="https://github.com">1</a>, <a href="https://github.com">2</a>, <a href="https://github.com">3</a>)</p>
+</li>
+<li>
+<p>Some parts of the history feature I added was adopted by several other class mates (<a href="https://github.com">1</a>, <a href="https://github.com">2</a>)</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Tools: //not updated</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Integrated a third party library (Natty) to the project (<a href="https://github.com">#42</a>)</p>
+</li>
+<li>
+<p>Integrated a new Github plugin (CircleCI) to the team repo</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><em>{you can add/remove categories in the list above}</em></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="contributions-to-the-user-guide"><a class="link" href="#contributions-to-the-user-guide">Contributions to the User Guide</a></h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 100%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Given below are sections I contributed to the User Guide. They showcase my ability to write documentation targeting end-users.</em></p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect2">
+<h3 id="quiz-mode"><a class="link" href="#quiz-mode">Quiz mode</a></h3>
+<div class="paragraph">
+<p>Starts a quiz using a particular flashcard index or with a with an optional time limit with units in seconds.<br>
+Format:</p>
+</div>
+<div class="paragraph">
+<p>Format: <code>quiz INDEX [s/TIME_LIMIT]</code></p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>Start a quiz using the flashcard with given index.</p>
+</li>
+<li>
+<p>User can answer the flashcard using the <code>flip</code> command (see 3.8).</p>
+</li>
+<li>
+<p>If the quiz is not answered within the time limit, FlashMind will skip the quiz and mark it as wrong.</p>
+</li>
+<li>
+<p>If the quiz time is not specified, the default time limit will be 15 seconds.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>quiz 8</code>: start a quiz on the flashcard number 8 with a default time limit of 15 seconds.</p>
+</li>
+<li>
+<p><code>quiz 8 t/10</code> : start a quiz on the flashcard number 8, given time limit 10 seconds.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="quiz-tag-mode"><a class="link" href="#quiz-tag-mode">Quiz Tag mode</a></h3>
+<div class="paragraph">
+<p>Starts a continuous quiz on a tag or a series of tags and an optional time limit with units in seconds.<br>
+Format:</p>
+</div>
+<div class="paragraph">
+<p>Format: <code>quiztag t/TAG&#8230;&#8203; [s/TIME_LIMIT]</code></p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>Starts a continuous quiz on all flashcards in the given tags</p>
+</li>
+<li>
+<p>Users can continuously use the <code>flip</code> command to answer the series of flashcards (see 3.8).</p>
+</li>
+<li>
+<p>If the quiz time is not specified, the default time limit will be 15 seconds.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>quiztag t/mathematics t/geography</code> : start a quiz on all the flashcards with tag <code>mathematics</code> and <code>geography</code>.</p>
+</li>
+<li>
+<p><code>quiztag t/mathematics s/30</code> : start a quiz on all flashcards with tag <code>mathematics</code> with each quiz a time limit of 30 seconds.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="flip-a-flashcard"><a class="link" href="#flip-a-flashcard">Flip a flashcard</a></h3>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Only usable in quiz mode (i.e after a quiz or quiztag command)
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Format: <code>flip ANSWER</code></p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>Short answer flashcards will accept any answer.</p>
+</li>
+<li>
+<p>MCQ flashcards will only accept numbers as an answer. The number must match an index of the choices.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="paragraph">
+<p>After <code>quiztag t/geography</code>, the flashcard below is shown:</p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p>What is the tallest mountain in the world?</p>
+</div>
+<div class="paragraph">
+<p>Definitions: The answer is Mount Everest.</p>
+</div>
+<div class="paragraph">
+<p>Tags: [geography]</p>
+</div>
+<div class="paragraph">
+<p>Choices:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Mount Fuji</p>
+</li>
+<li>
+<p>Mount Everest</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>The user can type <code>flip 2</code> to answer the flashcard correctly.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="end-quiz-mode"><a class="link" href="#end-quiz-mode">End quiz mode</a></h3>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Only usable in quiz mode(i.e after a quiz or quiztag command).
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Format: <code>end</code></p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>Used to end a quiz if the user wants to stop the quiz without answering the flashcard</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="contributions-to-the-developer-guide"><a class="link" href="#contributions-to-the-developer-guide">Contributions to the Developer Guide</a></h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 100%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Given below are sections I contributed to the Developer Guide. They showcase my ability to write technical documentation and the technical depth of my contributions to the project.</em></p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect2">
+<h3 id="Design-Logic"><a class="link" href="#Design-Logic">Logic component</a></h3>
+<div id="fig-LogicClassDiagram" class="imageblock">
+<div class="content">
+<img src="../images/LogicClassDiagram.png" alt="LogicClassDiagram">
+</div>
+<div class="title">Figure 1. Structure of the Logic Component</div>
+</div>
+<div class="paragraph">
+<p><strong>API</strong> :
+<a href="{repoURL}/src/main/java/seedu/flashcard/logic/Logic.java"><code>Logic.java</code></a></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><code>Logic</code> uses the <code>FlashcardListParser</code> class to parse the user command.</p>
+</li>
+<li>
+<p>This results in a <code>Command</code> object which is executed by the <code>LogicManager</code>.</p>
+</li>
+<li>
+<p>The command execution can affect the <code>Model</code> (e.g. adding a Flashcard).</p>
+</li>
+<li>
+<p>The result of the command execution is encapsulated as a <code>CommandResult</code> object which is passed back to the <code>Ui</code>.</p>
+</li>
+<li>
+<p>In addition, the <code>CommandResult</code> object can also instruct the <code>Ui</code> to perform certain actions, such as displaying help to the user.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Given below is the Sequence Diagram for interactions within the <code>Logic</code> component for the <code>execute("delete 1")</code> API call.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/DeleteSequenceDiagram.png" alt="DeleteSequenceDiagram">
+</div>
+<div class="title">Figure 2. Interactions Inside the Logic Component for the <code>delete 1</code> Command</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The lifeline for <code>DeleteCommandParser</code> should end at the destroy marker (X) but due to a limitation of PlantUML, the lifeline reaches the end of diagram.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="contributions-to-the-readme"><a class="link" href="#contributions-to-the-readme">Contributions to the README</a></h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 100%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Given below are sections I contributed to the README. They showcase my ability to write documentation advertising the project.</em></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="project-flashmind-2"><a class="link" href="#project-flashmind-2">PROJECT: Flashmind</a></h2>
+<div class="sectionbody">
+<hr>
+<div class="paragraph">
+<p><em>{Optionally, you may include other projects in your portfolio.}</em></p>
+</div>
+</div>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-11-09 12:02:42 UTC</div></div></div></body></html>

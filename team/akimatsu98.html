@@ -1,0 +1,379 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]--><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="Asciidoctor 1.5.6.1"><title>He Songchi - Project Portfolio</title><link rel="stylesheet" href="../stylesheets/gh-pages.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="../stylesheets/coderay-asciidoctor.css"></head><body class="article"><div id="site-header"><nav class="navbar navbar-light bg-light"><div class="container"><ul class="navbar-nav"><li class="nav-item"><a class="nav-link" href="../UserGuide.html">User Guide</a></li><li class="nav-item"><a class="nav-link" href="../DeveloperGuide.html">Developer Guide</a></li><li class="nav-item"><a class="nav-link" href="../LearningOutcomes.html">LOs</a></li><li class="nav-item"><a class="nav-link active" href="../AboutUs.html">About Us</a></li><li class="nav-item"><a class="nav-link" href="../ContactUs.html">Contact Us</a></li></ul></div></nav></div><div id="header"><h1>He Songchi - Project Portfolio</h1></div><div id="content"><div class="sect1">
+<h2 id="project-flashmind"><a class="link" href="#project-flashmind">PROJECT: FlashMind</a></h2>
+<div class="sectionbody">
+<hr>
+</div>
+</div>
+<div class="sect1">
+<h2 id="overview"><a class="link" href="#overview">Overview</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>FlashMind enables users to organize pieces of information in the form of flashcards, review and tests them in order to absorb knowledge in a very productive manner. The program features an commandline interface (CLI).</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="summary-of-contributions"><a class="link" href="#summary-of-contributions">Summary of contributions</a></h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><strong>First major enhancement</strong>: added <strong>the ability to undo/redo commands whenever there is a change to the flashcard list.</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>What it does: Allows the flashcard list to be reverted back to its previous state or restored back to its undone state.</p>
+</li>
+<li>
+<p>Justification: This feature improves the product significantly because it is very likely that the user might input something wrong, accidentally deleted all tags and so forth. This provides them with a very easy way to get back what they want.</p>
+</li>
+<li>
+<p>Highlights: This feature, although not challenging conceptually, is quite time-consuming as I needed to do a lot of refactoring of code to ensure that the undo/redo feature is compatible with all our existing commands, and it turned out that many bugs emerged after adding this command and I spent a lot of time debugging to ensure that this feature becomes bug-free and fully integrated into our program.</p>
+</li>
+<li>
+<p>Credits: The overall undo/redo concept was borrowed from AddressBook 4 and besides lines of new coded added, many of the codes are adapted from its code base.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Second major enhancement</strong>: redesigned <strong>the GUI layout and colour scheme</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>What it does: Recreated the graphical user interface, which is divided into various sections, each responsible for a particular function.</p>
+</li>
+<li>
+<p>Justification: This feature is quite important as it allows future features to be added and integrated smoothly and also it is a major shift away from the original Address Book GUI.</p>
+</li>
+<li>
+<p>Highlights: This feature requires some good understanding of the GUI design and a little bit of CSS knowledge. As a freshman who has no previous experience with GUI, I actually spent hours on this.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Minor enhancement</strong>:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Constantly updating GUI to ensure that it has higher usability and fewer bugs, such as the resizability issue.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Code contributed</strong>:Click on the link [<a href="https://nus-cs2103-ay1920s1.github.io/tp-dashboard/#search=akimatsu98&amp;sort=groupTitle&amp;sortWithin=title&amp;since=2019-09-06&amp;timeframe=commit&amp;mergegroup=false&amp;groupSelect=groupByAuthors&amp;breakdown=false&amp;tabOpen=true&amp;tabType=zoom&amp;tabAuthor=Oscar-B-Liang&amp;tabRepo=AY1920S1-CS2103-T14-3%2Fmain%5Bmaster%5D">link</a>] to view my code contributions.</p>
+</li>
+<li>
+<p><strong>Other contributions</strong>:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Documentation:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Documented the undo/redo feature in the Developer Guide.</p>
+</li>
+<li>
+<p>Contributed and modified the majority of the use cases in the Developer Guide.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="contributions-to-the-developer-guide"><a class="link" href="#contributions-to-the-developer-guide">Contributions to the Developer Guide</a></h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 100%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Given below are sections I contributed to the Developer Guide. They showcase my ability to write technical documentation and the technical depth of my contributions to the project.</em></p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect2">
+<h3 id="undo-redo-feature"><a class="link" href="#undo-redo-feature">Undo/Redo feature</a></h3>
+<div class="sect3">
+<h4 id="implementation"><a class="link" href="#implementation">Implementation</a></h4>
+<div class="paragraph">
+<p>The undo/redo mechanism is facilitated by <code>VersionedFlashcardList</code>.
+It extends <code>FlashcardList</code> with an undo/redo history, stored internally as an <code>flashcardListStateList</code> and <code>currentStatePointer</code>.
+Additionally, it implements the following operations:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>VersionedFlashcardList#commit()</code>&#8201;&#8212;&#8201;Saves the current flashcard list state in its history.</p>
+</li>
+<li>
+<p><code>VersionedFlashcardList#undo()</code>&#8201;&#8212;&#8201;Restores the previous flashcard list state from its history.</p>
+</li>
+<li>
+<p><code>VersionedFlashcardList#redo()</code>&#8201;&#8212;&#8201;Restores a previously undone flashcard list state from its history.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>These operations are exposed in the <code>Model</code> interface as <code>Model#commitFlashcardList()</code>, <code>Model#undoFlashcardList()</code> and <code>Model#redoFlashcardList()</code> respectively.</p>
+</div>
+<div class="paragraph">
+<p>Given below is an example usage scenario and how the undo/redo mechanism behaves at each step.</p>
+</div>
+<div class="paragraph">
+<p>Step 1. The user launches the application for the first time. The <code>VersionedFlashcardList</code> will be initialized with the initial flashcard list state, and the <code>currentStatePointer</code> pointing to that single flashcard list state.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/UndoRedoState0.png" alt="UndoRedoState0">
+</div>
+</div>
+<div class="paragraph">
+<p>Step 2. The user executes <code>delete 5</code> command to delete the 5th Flashcard in the flashcard list. The <code>delete</code> command calls <code>Model#commitFlashcardList()</code>, causing the modified state of the flashcard list after the <code>delete 5</code> command executes to be saved in the <code>flashcardListStateList</code>, and the <code>currentStatePointer</code> is shifted to the newly inserted flashcard list state.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/UndoRedoState1.png" alt="UndoRedoState1">
+</div>
+</div>
+<div class="paragraph">
+<p>Step 3. The user executes <code>add q/What is a machine &#8230;&#8203;</code> to add a new Flashcard. The <code>add</code> command also calls <code>Model#commitFlashcardList()</code>, causing another modified flashcard list state to be saved into the <code>flashcardListStateList</code>.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/UndoRedoState2.png" alt="UndoRedoState2">
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+If a command fails its execution, it will not call <code>Model#commitFlashcardList()</code>, so the flashcard list state will not be saved into the <code>flashcardListStateList</code>.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Step 4. The user now decides that adding the flashcard was a mistake, and decides to undo that action by executing the <code>undo</code> command. The <code>undo</code> command will call <code>Model#undoFlashcardList()</code>, which will shift the <code>currentStatePointer</code> once to the left, pointing it to the previous flashcard list state, and restores the flashcard list to that state.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/UndoRedoState3.png" alt="UndoRedoState3">
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+If the <code>currentStatePointer</code> is at index 0, pointing to the initial flashcard list state, then there are no previous flashcard list states to restore. The <code>undo</code> command uses <code>Model#canUndoFlashcardList()</code> to check if this is the case. If so, it will return an error to the user rather than attempting to perform the undo.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>The following sequence diagram shows how the undo operation works:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/UndoSequenceDiagram.png" alt="UndoSequenceDiagram">
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The lifeline for <code>UndoCommand</code> should end at the destroy marker (X) but due to a limitation of PlantUML, the lifeline reaches the end of diagram.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>The <code>redo</code> command does the opposite&#8201;&#8212;&#8201;it calls <code>Model#redoFlashcardList()</code>, which shifts the <code>currentStatePointer</code> once to the right, pointing to the previously undone state, and restores the flashcard list to that state.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+If the <code>currentStatePointer</code> is at index <code>flashcardListStateList.size() - 1</code>, pointing to the latest flashcard list state, then there are no undone flashcard list states to restore. The <code>redo</code> command uses <code>Model#canRedoFlashcardList()</code> to check if this is the case. If so, it will return an error to the user rather than attempting to perform the redo.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Step 5. The user then decides to execute the command <code>list</code>. Commands that do not modify the flashcard list, such as <code>list</code>, will usually not call <code>Model#commitFlashcardList()</code>, <code>Model#undoFlashcardList()</code> or <code>Model#redoFlashcardList()</code>. Thus, the <code>flashcardListStateList</code> remains unchanged.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/UndoRedoState4.png" alt="UndoRedoState4">
+</div>
+</div>
+<div class="paragraph">
+<p>The following activity diagram summarizes what happens when a user executes a new command:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/CommitActivityDiagram.png" alt="CommitActivityDiagram">
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="design-considerations"><a class="link" href="#design-considerations">Design Considerations</a></h4>
+<div class="sect4">
+<h5 id="aspect-how-undo-redo-executes"><a class="link" href="#aspect-how-undo-redo-executes">Aspect: How undo &amp; redo executes</a></h5>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Alternative 1 (current choice):</strong> Saves the entire flashcard list.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Pros: Easy to implement.</p>
+</li>
+<li>
+<p>Cons: May have performance issues in terms of memory usage.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Alternative 2:</strong> Individual command knows how to undo/redo by itself.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Pros: Will use less memory (e.g. for <code>delete</code>, just save the flashcard being deleted).</p>
+</li>
+<li>
+<p>Cons: We must ensure that the implementation of each individual command are correct. There will be a lot coding involved and a higher chance of regression bugs.</p>
+<h3 id="use-case-uc04-edit-a-flashcard" class="discrete">Use case: UC04 - edit a flashcard</h3>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Actor: User</p>
+</div>
+<div class="paragraph">
+<p><strong>MSS</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>User <span class="underline">views all existing flashcards (UC01)</span>.</p>
+</li>
+<li>
+<p>User identifies the index of the particular flashcard that he/she wants to edit.</p>
+</li>
+<li>
+<p>User request to edit the question, tag or answer of a flashcard.</p>
+</li>
+<li>
+<p>FlashMind updates the question, tag or answer on the specific flashcard.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>Extensions</strong></p>
+</div>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>2a. The requested question or answer is in wrong format</p>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>2a1. FlashMind shows an error message including the constraints of the question and answer.</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>2b. The input flashcard index number is invalid</p>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>2b1. FlashMind shows an error message.</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<h3 id="use-case-uc05-find-all-flashcards-with-particular-tags" class="discrete">Use case: UC05 - find all flashcards with particular tags</h3>
+<div class="paragraph">
+<p>Actor: User</p>
+</div>
+<div class="paragraph">
+<p><strong>MSS</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>User request to list all the flashcard sets with the same tags by inputting these tags.</p>
+</li>
+<li>
+<p>FlashMind shows a list of all current flashcards with the provided tags.</p>
+</li>
+</ol>
+</div>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>2a. The tag is empty or does not exist.</p>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>2a1. System displays an error message.
+user case ends.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="project-flashmind-2"><a class="link" href="#project-flashmind-2">PROJECT: FlashMind</a></h2>
+<div class="sectionbody">
+<hr>
+</div>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-11-09 12:02:42 UTC</div></div></div></body></html>

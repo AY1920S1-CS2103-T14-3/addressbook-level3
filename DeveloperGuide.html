@@ -14,19 +14,17 @@
 <ul class="sectlevel2">
 <li><a href="#Design-Architecture">2.1. Architecture</a></li>
 <li><a href="#Design-Ui">2.2. UI component</a></li>
-<li><a href="#Design-Logic">2.3. Logic component</a></li>
-<li><a href="#Design-Model">2.4. Model component</a></li>
-<li><a href="#Design-Storage">2.5. Storage component</a></li>
-<li><a href="#Design-Commons">2.6. Common classes</a></li>
+<li><a href="#Design-Model">2.3. Model component</a></li>
+<li><a href="#Design-Storage">2.4. Storage component</a></li>
+<li><a href="#Design-Commons">2.5. Common classes</a></li>
 </ul>
 </li>
 <li><a href="#implementation">3. Implementation</a>
 <ul class="sectlevel2">
 <li><a href="#quiz-and-flip-feature">3.1. Quiz and Flip feature</a></li>
-<li><a href="#proposed-undo-redo-feature">3.2. [Proposed] Undo/Redo feature</a></li>
-<li><a href="#proposed-data-encryption">3.3. [Proposed] Data Encryption</a></li>
-<li><a href="#logging">3.4. Logging</a></li>
-<li><a href="#Implementation-Configuration">3.5. Configuration</a></li>
+<li><a href="#undo-redo-feature">3.2. Undo/Redo feature</a></li>
+<li><a href="#logging">3.3. Logging</a></li>
+<li><a href="#Implementation-Configuration">3.4. Configuration</a></li>
 </ul>
 </li>
 <li><a href="#documentation">4. Documentation</a></li>
@@ -188,13 +186,11 @@ The following class plays an important role at the architecture level:</p>
 <p>Executes user commands using the <code>Logic</code> component.</p>
 </li>
 <li>
-<p>Listens for changes to <code>Model</code> data so that the UI can be updated with the modified data.</p>
+<p>Listens for changes to <code>Model</code> data so that the UI can be updated with the modified data.
+=== Logic component</p>
 </li>
 </ul>
 </div>
-</div>
-<div class="sect2">
-<h3 id="Design-Logic"><a class="link" href="#Design-Logic">2.3. Logic component</a></h3>
 <div id="fig-LogicClassDiagram" class="imageblock">
 <div class="content">
 <img src="images/LogicClassDiagram.png" alt="LogicClassDiagram">
@@ -247,7 +243,7 @@ The lifeline for <code>DeleteCommandParser</code> should end at the destroy mark
 </div>
 </div>
 <div class="sect2">
-<h3 id="Design-Model"><a class="link" href="#Design-Model">2.4. Model component</a></h3>
+<h3 id="Design-Model"><a class="link" href="#Design-Model">2.3. Model component</a></h3>
 <div class="imageblock">
 <div class="content">
 <img src="images/ModelClassDiagram.png" alt="ModelClassDiagram">
@@ -278,7 +274,7 @@ The lifeline for <code>DeleteCommandParser</code> should end at the destroy mark
 </div>
 </div>
 <div class="sect2">
-<h3 id="Design-Storage"><a class="link" href="#Design-Storage">2.5. Storage component</a></h3>
+<h3 id="Design-Storage"><a class="link" href="#Design-Storage">2.4. Storage component</a></h3>
 <div class="imageblock">
 <div class="content">
 <img src="images/StorageClassDiagram.png" alt="StorageClassDiagram">
@@ -303,7 +299,7 @@ The lifeline for <code>DeleteCommandParser</code> should end at the destroy mark
 </div>
 </div>
 <div class="sect2">
-<h3 id="Design-Commons"><a class="link" href="#Design-Commons">2.6. Common classes</a></h3>
+<h3 id="Design-Commons"><a class="link" href="#Design-Commons">2.5. Common classes</a></h3>
 <div class="paragraph">
 <p>Classes used by multiple components are in the <code>seedu.flashcard.commons</code> package.</p>
 </div>
@@ -340,9 +336,9 @@ works.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="proposed-undo-redo-feature"><a class="link" href="#proposed-undo-redo-feature">3.2. [Proposed] Undo/Redo feature</a></h3>
+<h3 id="undo-redo-feature"><a class="link" href="#undo-redo-feature">3.2. Undo/Redo feature</a></h3>
 <div class="sect3">
-<h4 id="proposed-implementation"><a class="link" href="#proposed-implementation">3.2.1. Proposed Implementation</a></h4>
+<h4 id="implementation-2"><a class="link" href="#implementation-2">3.2.1. Implementation</a></h4>
 <div class="paragraph">
 <p>The undo/redo mechanism is facilitated by <code>VersionedFlashcardList</code>.
 It extends <code>FlashcardList</code> with an undo/redo history, stored internally as an <code>flashcardListStateList</code> and <code>currentStatePointer</code>.
@@ -467,14 +463,6 @@ If the <code>currentStatePointer</code> is at index <code>flashcardListStateList
 </div>
 </div>
 <div class="paragraph">
-<p>Step 6. The user executes <code>clear</code>, which calls <code>Model#commitFlashcardList()</code>. Since the <code>currentStatePointer</code> is not pointing at the end of the <code>flashcardListStateList</code>, all flashcard list states after the <code>currentStatePointer</code> will be purged. We designed it this way because it no longer makes sense to redo the <code>add n/David &#8230;&#8203;</code> command. This is the behavior that most modern desktop applications follow.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/UndoRedoState5.png" alt="UndoRedoState5">
-</div>
-</div>
-<div class="paragraph">
 <p>The following activity diagram summarizes what happens when a user executes a new command:</p>
 </div>
 <div class="imageblock">
@@ -510,7 +498,7 @@ If the <code>currentStatePointer</code> is at index <code>flashcardListStateList
 <p>Pros: Will use less memory (e.g. for <code>delete</code>, just save the flashcard being deleted).</p>
 </li>
 <li>
-<p>Cons: We must ensure that the implementation of each individual command are correct.</p>
+<p>Cons: We must ensure that the implementation of each individual command are correct. There will be a lot coding involved and a higher chance of regression bugs.</p>
 </li>
 </ul>
 </div>
@@ -527,10 +515,10 @@ If the <code>currentStatePointer</code> is at index <code>flashcardListStateList
 <div class="ulist">
 <ul>
 <li>
-<p>Pros: Easy for new Computer Science student undergraduates to understand, who are likely to be the new incoming developers of our project.</p>
+<p>Pros: It has a very clear structure and is therefore easy for future developers to update.</p>
 </li>
 <li>
-<p>Cons: Logic is duplicated twice. For example, when a new command is executed, we must remember to update both <code>HistoryManager</code> and <code>VersionedFlashcardList</code>.</p>
+<p>Cons: It might be difficult to navigate between different elements in the list. However, that&#8217;s not really a big issue as we only need to move to neighbouring states each time.</p>
 </li>
 </ul>
 </div>
@@ -554,22 +542,14 @@ If the <code>currentStatePointer</code> is at index <code>flashcardListStateList
 </div>
 </div>
 <div class="sect2">
-<h3 id="proposed-data-encryption"><a class="link" href="#proposed-data-encryption">3.3. [Proposed] Data Encryption</a></h3>
-<div class="paragraph">
-<p>Since the current FlashMind uses scores to helps the user see his progress, we found that the user can easily access
-the scores saved in the json files and change them, so the scoree will no longer be accurate. Therefore, it is suggestible
-to use some encryption on the scores saved in the json file to avoid the user manually change them.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="logging"><a class="link" href="#logging">3.4. Logging</a></h3>
+<h3 id="logging"><a class="link" href="#logging">3.3. Logging</a></h3>
 <div class="paragraph">
 <p>We are using <code>java.util.logging</code> package for logging. The <code>LogsCenter</code> class is used to manage the logging levels and logging destinations.</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>The logging level can be controlled using the <code>logLevel</code> setting in the configuration file (See <a href="#Implementation-Configuration">Section 3.5, &#8220;Configuration&#8221;</a>)</p>
+<p>The logging level can be controlled using the <code>logLevel</code> setting in the configuration file (See <a href="#Implementation-Configuration">Section 3.4, &#8220;Configuration&#8221;</a>)</p>
 </li>
 <li>
 <p>The <code>Logger</code> for a class can be obtained using <code>LogsCenter.getLogger(Class)</code> which will log messages according to the specified logging level</p>
@@ -600,7 +580,7 @@ to use some encryption on the scores saved in the json file to avoid the user ma
 </div>
 </div>
 <div class="sect2">
-<h3 id="Implementation-Configuration"><a class="link" href="#Implementation-Configuration">3.5. Configuration</a></h3>
+<h3 id="Implementation-Configuration"><a class="link" href="#Implementation-Configuration">3.4. Configuration</a></h3>
 <div class="paragraph">
 <p>Certain properties of the application can be controlled (e.g user prefs file location, logging level) through the configuration file (default: <code>config.json</code>).</p>
 </div>
@@ -772,9 +752,6 @@ to use some encryption on the scores saved in the json file to avoid the user ma
 </tr>
 </tbody>
 </table>
-<div class="paragraph">
-<p><em>{More to be added}</em></p>
-</div>
 </div>
 </div>
 <div class="sect1">
@@ -783,7 +760,7 @@ to use some encryption on the scores saved in the json file to avoid the user ma
 <div class="paragraph">
 <p>(For all use cases below, the <strong>System</strong> is the <code>FlashcardList</code> and the <strong>Actor</strong> is the <code>user</code>, unless specified otherwise)</p>
 </div>
-<h3 id="use-case-uc01-find-a-flashcard-id-number" class="discrete">Use case: UC01 - Find a flashcard ID number</h3>
+<h3 id="use-case-uc01-view-all-the-flashcards" class="discrete">Use case: UC01 - View all the flashcards</h3>
 <div class="paragraph">
 <p>Actor: User</p>
 </div>
@@ -793,13 +770,10 @@ to use some encryption on the scores saved in the json file to avoid the user ma
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>User requests to list flashcards.</p>
+<p>User requests to view all existing flashcards by using correct command line input.</p>
 </li>
 <li>
-<p>FlashMind shows a list of flashcards.</p>
-</li>
-<li>
-<p>User finds the flashcard ID number.</p>
+<p>FlashMind shows a list of all existing flashcards.</p>
 <div class="paragraph">
 <p>Use case ends.</p>
 </div>
@@ -812,24 +786,7 @@ to use some encryption on the scores saved in the json file to avoid the user ma
 <div class="ulist none">
 <ul class="none">
 <li>
-<p>1a. The user requests to list flashcards based on tags or keywords.</p>
-<div class="ulist none">
-<ul class="none">
-<li>
-<p>1a1. FlashMind shows the list of flashcards under the given tag or whose question or answer matches the keyword.</p>
-<div class="paragraph">
-<p>Use case resumes at step 3.</p>
-</div>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-<div class="ulist none">
-<ul class="none">
-<li>
-<p>1b. The flashcard list is empty.</p>
+<p>1a. The flashcard list is empty.</p>
 <div class="paragraph">
 <p>Use case ends.</p>
 </div>
@@ -846,10 +803,13 @@ to use some encryption on the scores saved in the json file to avoid the user ma
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>User <span class="underline">finds the flashcard ID number (UC01)</span>.</p>
+<p>User <span class="underline">views all flashcards (UC01)</span>.</p>
 </li>
 <li>
-<p>User request to delete the flashcard with given ID number.</p>
+<p>User locates the correct index of the flashcard he/she wants.</p>
+</li>
+<li>
+<p>User request to delete the flashcard with the specific index number.</p>
 </li>
 <li>
 <p>FlashMind deletes the flashcard.</p>
@@ -865,7 +825,7 @@ to use some encryption on the scores saved in the json file to avoid the user ma
 <div class="ulist none">
 <ul class="none">
 <li>
-<p>2a. The given ID number is invalid.</p>
+<p>2a. The given index is invalid.</p>
 <div class="ulist none">
 <ul class="none">
 <li>
@@ -889,13 +849,16 @@ to use some encryption on the scores saved in the json file to avoid the user ma
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>User <span class="underline">finds the flashcard ID number (UC01)</span>.</p>
+<p>User <span class="underline">views all existing flashcards (UC01)</span>.</p>
 </li>
 <li>
-<p>User requires to tag the flashcard with a given tag name.</p>
+<p>User identifies the index of the particular flashcard that he/she wants to tag.</p>
 </li>
 <li>
-<p>FlashMind creates a new tag with the given tag name and put the flashcard under the given tag name.</p>
+<p>User tags the flashcard with provided tag names.</p>
+</li>
+<li>
+<p>FlashMind creates new tags with the given tag names and put the flashcard under these tags.</p>
 <div class="paragraph">
 <p>Use case ends.</p>
 </div>
@@ -942,28 +905,11 @@ to use some encryption on the scores saved in the json file to avoid the user ma
 <div class="ulist none">
 <ul class="none">
 <li>
-<p>2c. The input flashcard ID number is invalid.</p>
+<p>2c. The input flashcard index number is invalid.</p>
 <div class="ulist none">
 <ul class="none">
 <li>
 <p>2c1. FlashMind shows an error message.</p>
-<div class="paragraph">
-<p>Use case ends.</p>
-</div>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-<div class="ulist none">
-<ul class="none">
-<li>
-<p>2d. The given tag name is empty.</p>
-<div class="ulist none">
-<ul class="none">
-<li>
-<p>2d1. FlashMind shows an error message including the constraints on tag names.</p>
 <div class="paragraph">
 <p>Use case ends.</p>
 </div>
@@ -983,13 +929,16 @@ to use some encryption on the scores saved in the json file to avoid the user ma
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>User <span class="underline">finds the flashcard ID number (UC01)</span>.</p>
+<p>User <span class="underline">views all existing flashcards (UC01)</span>.</p>
 </li>
 <li>
-<p>User request to edit the question or answer of a flashcard.</p>
+<p>User identifies the index of the particular flashcard that he/she wants to edit.</p>
 </li>
 <li>
-<p>FlashMind updates the question or answer on the given flashcard.</p>
+<p>User request to edit the question, tag or answer of a flashcard.</p>
+</li>
+<li>
+<p>FlashMind updates the question, tag or answer on the specific flashcard.</p>
 </li>
 </ol>
 </div>
@@ -1016,7 +965,7 @@ to use some encryption on the scores saved in the json file to avoid the user ma
 <div class="ulist none">
 <ul class="none">
 <li>
-<p>2b. The input flashcard Id number is invalid</p>
+<p>2b. The input flashcard index number is invalid</p>
 <div class="ulist none">
 <ul class="none">
 <li>
@@ -1030,7 +979,7 @@ to use some encryption on the scores saved in the json file to avoid the user ma
 </li>
 </ul>
 </div>
-<h3 id="use-case-uc05-find-a-tag-name" class="discrete">Use case: UC05 - find a tag name</h3>
+<h3 id="use-case-uc05-find-all-flashcards-with-particular-tags" class="discrete">Use case: UC05 - find all flashcards with particular tags</h3>
 <div class="paragraph">
 <p>Actor: User</p>
 </div>
@@ -1040,20 +989,17 @@ to use some encryption on the scores saved in the json file to avoid the user ma
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>User request to list all the flashcard sets with the same tags.</p>
+<p>User request to list all the flashcard sets with the same tags by inputting these tags.</p>
 </li>
 <li>
-<p>FlashMind shows a list of all current flashcard sets.</p>
-</li>
-<li>
-<p>User finds the particular set he or she desires.</p>
+<p>FlashMind shows a list of all current flashcards with the provided tags.</p>
 </li>
 </ol>
 </div>
 <div class="ulist none">
 <ul class="none">
 <li>
-<p>2a. The tag list is empty.</p>
+<p>2a. The tag is empty or does not exist.</p>
 <div class="ulist none">
 <ul class="none">
 <li>
@@ -1065,7 +1011,7 @@ user case ends.</p>
 </li>
 </ul>
 </div>
-<h3 id="use-case-uc06-edit-a-tag-name" class="discrete">Use case: UC06 - edit a tag name</h3>
+<h3 id="use-case-uc06-delete-a-tag" class="discrete">Use case: UC06 - delete a tag</h3>
 <div class="paragraph">
 <p>Actor: User</p>
 </div>
@@ -1075,70 +1021,10 @@ user case ends.</p>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>User <span class="underline">finds the tag (UC05)</span>.</p>
+<p>User requests to delete a particular tag by inputting the name of that tag.</p>
 </li>
 <li>
-<p>User requests to update the tag name.</p>
-</li>
-<li>
-<p>FlashMind updates the name of the tag.</p>
-</li>
-</ol>
-</div>
-<div class="paragraph">
-<p><strong>Extensions</strong></p>
-</div>
-<div class="ulist none">
-<ul class="none">
-<li>
-<p>4a. The tag user wants to update does not exist.</p>
-<div class="ulist none">
-<ul class="none">
-<li>
-<p>4a1. FlashMind shows an error message.</p>
-<div class="paragraph">
-<p>Use case ends.</p>
-</div>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-<div class="ulist none">
-<ul class="none">
-<li>
-<p>4b. The new tag name is invalid.</p>
-<div class="ulist none">
-<ul class="none">
-<li>
-<p>4b1. FlashMind shows an error message including the constraints on the tag name.</p>
-<div class="paragraph">
-<p>Use case ends.</p>
-</div>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-<h3 id="use-case-uc07-delete-a-tag-from-the-tag-list" class="discrete">Use case: UC07 - delete a tag from the tag list</h3>
-<div class="paragraph">
-<p>Actor: User</p>
-</div>
-<div class="paragraph">
-<p><strong>MSS</strong></p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>User <span class="underline">finds the tag (UC05)</span>.</p>
-</li>
-<li>
-<p>User requests to delete the tag.</p>
-</li>
-<li>
-<p>FlashMind deletes the tag from all flashcards with this tag and delete it from the tag list.</p>
+<p>FlashMind deletes the tag from all flashcards with this tag and delete it from the tag list. Also, all flashcards with that tag are not removed.</p>
 </li>
 </ol>
 </div>
@@ -1162,47 +1048,7 @@ user case ends.</p>
 </li>
 </ul>
 </div>
-<h3 id="use-case-uc08-delete-a-tag-from-a-flashcard" class="discrete">Use case: UC08 - delete a tag from a flashcard</h3>
-<div class="paragraph">
-<p>Actor: User</p>
-</div>
-<div class="paragraph">
-<p><strong>MSS</strong></p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>User <span class="underline">finds the flashcard (UC01)</span>.</p>
-</li>
-<li>
-<p>User requests to delete the tag from the flashcard.</p>
-</li>
-<li>
-<p>FlashMind deletes the tag from the flashcard.</p>
-</li>
-</ol>
-</div>
-<div class="paragraph">
-<p><strong>Extensions</strong></p>
-</div>
-<div class="ulist none">
-<ul class="none">
-<li>
-<p>4a. The tag user wants to delete does not exist.</p>
-<div class="ulist none">
-<ul class="none">
-<li>
-<p>4a1. FlashMind shows an error message.</p>
-<div class="paragraph">
-<p>Use case ends.</p>
-</div>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-<h3 id="use-case-uc09-start-a-quiz-on-a-tag" class="discrete">Use case: UC09 - Start a quiz on a tag</h3>
+<h3 id="use-case-uc07-start-a-quiz-on-a-flashcard" class="discrete">Use case: UC07 - Start a quiz on a flashcard</h3>
 <div class="paragraph">
 <p>Actor: User</p>
 </div>
@@ -1215,29 +1061,25 @@ user case ends.</p>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>User starts a quiz on a tag</p>
+<p>User <span class="underline">views all existing flashcards (UC01)</span>.</p>
 </li>
 <li>
-<p>FlashMind shows a question</p>
+<p>User starts a quiz on a particular flashcard by providing its index.</p>
 </li>
 <li>
-<p>User answers the question</p>
+<p>FlashMind displays the question on that flashcard.</p>
 </li>
 <li>
-<p>FlashMind displays result</p>
+<p>User carries out the quiz by providing an answer to that question.</p>
 </li>
 <li>
-<p>User confirms the result</p>
-<div class="ulist none">
-<ul class="none">
-<li>
-<p>steps 2-5 are repeated until all the flashcard in the tag have been displayed.</p>
-</li>
-</ul>
-</div>
+<p>FlashMind displays result.</p>
 </li>
 <li>
-<p>Quiz shows the results of the quiz</p>
+<p>User confirms the result.</p>
+</li>
+<li>
+<p>Quiz ends.</p>
 </li>
 </ol>
 </div>
@@ -1254,13 +1096,104 @@ user case ends.</p>
 <div class="ulist none">
 <ul class="none">
 <li>
-<p>3a1. FlashMind waits for the set period</p>
+<p>3a1. FlashMind waits for 15 seconds</p>
 </li>
 <li>
 <p>3a2. User still has no answer</p>
 </li>
 <li>
-<p>Use case resumes from step 4 (question is marked wrong)</p>
+<p>Flashcard will be skipped or marked as wrong.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>*a. At any time, User decides to end the quiz</p>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>*a1. FlashMind  requests to confirm the cancellation.</p>
+</li>
+<li>
+<p>*a2. User confirms the cancellation.</p>
+</li>
+<li>
+<p>use case ends</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<h3 id="use-case-uc08-start-a-quiz-on-a-set-of-flashcards-with-the-same-tag" class="discrete">Use case: UC08 - Start a quiz on a set of flashcards with the same tag</h3>
+<div class="paragraph">
+<p>Actor: User</p>
+</div>
+<div class="paragraph">
+<p>Precondition: The tag exists in the database</p>
+</div>
+<div class="paragraph">
+<p><strong>MSS</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>User <span class="underline">views all existing flashcards (UC01)</span>.</p>
+</li>
+<li>
+<p>User identifies a particular tag that he/she wants to quiz on.</p>
+</li>
+<li>
+<p>User starts a quiz on that tag by providing the tag name.</p>
+</li>
+<li>
+<p>FlashMind shows the question of the first flashcard.</p>
+</li>
+<li>
+<p>User answers the question by providing a response.</p>
+</li>
+<li>
+<p>FlashMind displays result.</p>
+</li>
+<li>
+<p>User confirms the result.</p>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>steps 2-5 are repeated until all the flashcard in the tag have been quizzed.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Quiz ends.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Use case ends</p>
+</div>
+<div class="paragraph">
+<p><strong>Extensions</strong></p>
+</div>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>3a. User does not give an answer</p>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>3a1. FlashMind waits for 15 seconds.</p>
+</li>
+<li>
+<p>3a2. User still has no answer</p>
+</li>
+<li>
+<p>Use case resumes from step 4 (flashcard is skipped or marked as wrong)</p>
 </li>
 </ul>
 </div>
@@ -1287,6 +1220,46 @@ user case ends.</p>
 </li>
 </ul>
 </div>
+<h3 id="use-case-uc09-undo-redo-a-flashcard-list-change" class="discrete">Use case: UC09 - Undo/redo a flashcard list change</h3>
+<div class="paragraph">
+<p>Actor: User</p>
+</div>
+<div class="paragraph">
+<p>Precondition: There is an actual change that happened to the flashcard list.</p>
+</div>
+<div class="paragraph">
+<p><strong>MSS</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>User inputs either undo or redo command to get back the previous or previous undone state of flashcard list.</p>
+</li>
+<li>
+<p>FlashMind displays the undone/redone flashcard card list to the user.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Use case ends</p>
+</div>
+<div class="paragraph">
+<p><strong>Extensions</strong></p>
+</div>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>1a. There is no undoable/redoable state available</p>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>1a1. FlashMind displays error message.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
 <h3 id="use-case-uc10-view-all-the-available-commands" class="discrete">Use case: UC10 - View all the available commands</h3>
 <div class="paragraph">
 <p>Actor: User</p>
@@ -1307,72 +1280,7 @@ user case ends.</p>
 </li>
 </ol>
 </div>
-<h3 id="use-case-uc11-start-a-quiz-on-a-set-of-flashcards-with-the-same-tag" class="discrete">Use case: UC11 - Start a quiz on a set of flashcards with the same tag</h3>
-<div class="paragraph">
-<p>Actor: User</p>
-</div>
-<div class="paragraph">
-<p><strong>MSS</strong></p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>User <span class="underline">finds the tag that he or she wants to do a quiz on (UC05)</span></p>
-</li>
-<li>
-<p>System finds the particular flashcard set with the same tag and wait for further commands.</p>
-</li>
-<li>
-<p>User sets the time limit for each flashcard and tells the system to start the quiz.</p>
-</li>
-<li>
-<p>User does the timed quiz.</p>
-</li>
-<li>
-<p>At the end of the quiz, system will show useful statistics to the user.</p>
-<div class="paragraph">
-<p>Use case ends.</p>
-</div>
-</li>
-</ol>
-</div>
-<div class="paragraph">
-<p><strong>Extensions</strong></p>
-</div>
-<div class="ulist none">
-<ul class="none">
-<li>
-<p>2a. The desired flashcard set is not found.</p>
-<div class="ulist none">
-<ul class="none">
-<li>
-<p>2a1. System reports error.</p>
-<div class="paragraph">
-<p>Use case resumes at step 2.</p>
-</div>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-<div class="ulist none">
-<ul class="none">
-<li>
-<p>*a. User wants end the quiz prematurely at any time during the quiz mode.</p>
-<div class="ulist none">
-<ul class="none">
-<li>
-<p>*a1. User types in <code>exit</code><br>
-*a2. System exits the quiz, displays a goodbye message and skips the statistics part.<br>
-Use case ends.</p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-<h3 id="use-case-uc12-view-the-statistics-of-a-set-of-flashcards" class="discrete">Use case: UC12 - View the statistics of a set of flashcards</h3>
+<h3 id="use-case-uc11-view-the-statistics-of-a-set-of-flashcards-with-the-same-tag" class="discrete">Use case: UC11 - View the statistics of a set of flashcards with the same tag</h3>
 <div class="paragraph">
 <p>Actor: User</p>
 </div>
@@ -1412,12 +1320,12 @@ Use case ends.</p>
 </li>
 </ul>
 </div>
-<h3 id="use-case-uc13-show-progress-of-tag" class="discrete">Use case: UC13 - Show progress of tag</h3>
+<h3 id="use-case-uc12-show-statistics-of-a-particular-flashcard" class="discrete">Use case: UC12 - Show statistics of a particular flashcard.</h3>
 <div class="paragraph">
 <p>Actor: user</p>
 </div>
 <div class="paragraph">
-<p>Precondition: Tag exists in the system.</p>
+<p>Precondition: The flashcard exists in the system.</p>
 </div>
 <div class="paragraph">
 <p><strong>MSS</strong></p>
@@ -1425,18 +1333,21 @@ Use case ends.</p>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>User requests for the progress of a tag</p>
+<p>User <span class="underline">views all existing flashcards (UC01)</span>.</p>
 </li>
 <li>
-<p>System shows the statistics of the desired tag</p>
+<p>User identifies the index of that flashcard which he/she wants to view progress of.</p>
+</li>
+<li>
+<p>User requests for the progress of a flashcard by inputting the index number of that flashcard.</p>
+</li>
+<li>
+<p>System shows the statistics of that flashcard.</p>
 </li>
 </ol>
 </div>
 <div class="paragraph">
 <p>Use case ends</p>
-</div>
-<div class="paragraph">
-<p><em>{More to be added}</em></p>
 </div>
 </div>
 </div>
@@ -1633,4 +1544,4 @@ Expected: Similar to previous.</p>
 </div>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-11-09 10:33:47 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-11-09 12:02:42 UTC</div></div></div></body></html>

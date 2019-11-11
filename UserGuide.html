@@ -22,12 +22,13 @@
 <li><a href="#quiz-tag-mode">3.7. Quiz Tag mode</a></li>
 <li><a href="#flip-a-flashcard">3.8. Flip a flashcard</a></li>
 <li><a href="#end-quiz-mode">3.9. End quiz mode</a></li>
-<li><a href="#display-current-progress">3.10. Display current progress</a></li>
-<li><a href="#delete-a-flashcard">3.11. Delete a flashcard</a></li>
-<li><a href="#finding-a-flashcard">3.12. Finding a flashcard</a></li>
-<li><a href="#undo-redo">3.13. Undo &amp; Redo</a></li>
-<li><a href="#exiting-the-program">3.14. Exiting the program</a></li>
-<li><a href="#saving-the-data">3.15. Saving the data</a></li>
+<li><a href="#skip-flashcards-in-quiz">3.10. Skip Flashcards in Quiz</a></li>
+<li><a href="#display-current-progress">3.11. Display current progress</a></li>
+<li><a href="#delete-a-flashcard">3.12. Delete a flashcard</a></li>
+<li><a href="#finding-a-flashcard">3.13. Finding a flashcard</a></li>
+<li><a href="#undo-redo">3.14. Undo &amp; Redo</a></li>
+<li><a href="#exiting-the-program">3.15. Exiting the program</a></li>
+<li><a href="#saving-the-data">3.16. Saving the data</a></li>
 </ul>
 </li>
 </ul>
@@ -457,7 +458,20 @@ Only usable in quiz mode(i.e after a quiz or quiztag command).
 </div>
 </div>
 <div class="sect2">
-<h3 id="display-current-progress"><a class="link" href="#display-current-progress">3.10. Display current progress</a></h3>
+<h3 id="skip-flashcards-in-quiz"><a class="link" href="#skip-flashcards-in-quiz">3.10. Skip Flashcards in Quiz</a></h3>
+<div class="paragraph">
+<p>Format: <code>skip</code></p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p>*Used to skip a flashcard during a quiz if the user does not know the answer or want to answer</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="display-current-progress"><a class="link" href="#display-current-progress">3.11. Display current progress</a></h3>
 <div class="paragraph">
 <p>Shows the current progress of a set of flashcards.<br>
 Format: <code>stats [t/TAG]&#8230;&#8203;</code></p>
@@ -491,7 +505,7 @@ Format: <code>stats [t/TAG]&#8230;&#8203;</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="delete-a-flashcard"><a class="link" href="#delete-a-flashcard">3.11. Delete a flashcard</a></h3>
+<h3 id="delete-a-flashcard"><a class="link" href="#delete-a-flashcard">3.12. Delete a flashcard</a></h3>
 <div class="paragraph">
 <p>Deletes the specified flashcard from the list of all flashcards.<br>
 Format: <code>delete INDEX</code></p>
@@ -519,7 +533,7 @@ Format: <code>delete INDEX</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="finding-a-flashcard"><a class="link" href="#finding-a-flashcard">3.12. Finding a flashcard</a></h3>
+<h3 id="finding-a-flashcard"><a class="link" href="#finding-a-flashcard">3.13. Finding a flashcard</a></h3>
 <div class="paragraph">
 <p>Find a flashcard based on the keyword in its question, definition or answer.<br>
 Format: <code>find KEYWORD</code></p>
@@ -547,7 +561,7 @@ Format: <code>find KEYWORD</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="undo-redo"><a class="link" href="#undo-redo">3.13. Undo &amp; Redo</a></h3>
+<h3 id="undo-redo"><a class="link" href="#undo-redo">3.14. Undo &amp; Redo</a></h3>
 <div class="paragraph">
 <p>Suppose you delete, add or edit a flashcard with a mistake, you can use undo to bring yourself back to the previous stage.
 If you did an Undo command by mistake, you can also use Redo command to undo an Undo Command. Note that Undo and Redo can only take affect
@@ -556,7 +570,7 @@ Format: <code>Undo</code>, <code>Redo</code>.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="exiting-the-program"><a class="link" href="#exiting-the-program">3.14. Exiting the program</a></h3>
+<h3 id="exiting-the-program"><a class="link" href="#exiting-the-program">3.15. Exiting the program</a></h3>
 <div class="paragraph">
 <p>Exits the program.<br>
 Format: <code>exit</code><br>
@@ -566,7 +580,7 @@ quiz scores might not be saved. Through <code>exit</code> command, all of your q
 </div>
 </div>
 <div class="sect2">
-<h3 id="saving-the-data"><a class="link" href="#saving-the-data">3.15. Saving the data</a></h3>
+<h3 id="saving-the-data"><a class="link" href="#saving-the-data">3.16. Saving the data</a></h3>
 <div class="paragraph">
 <p>Flashcards are saved in the hard disk automatically after any command that changes the data.<br>
 There is no need to save manually.<br>
@@ -576,4 +590,4 @@ can give you is to delete the file flashcardlist.json, so the system will start 
 </div>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-11-11 13:36:50 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-11-11 14:09:56 UTC</div></div></div></body></html>
